@@ -40,5 +40,6 @@ let obtenerCargoFijo = function() {
 let obtenerPorcentajeIva = function() {
   return 19;
 };
-
-
+let calcularSubtotal = () => {
+  return calcularConsumoMensual() * obtenerTarifaPorKwh();
+};
