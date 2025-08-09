@@ -22,11 +22,21 @@ Los valores deben estar definidos directamente dentro de las funciones.
 El enfoque del ejercicio es comparar la forma y el comportamiento de cada tipo de función.
 El proyecto debe estar en un repositorio de GitHub con une buena conveción de nomenclatura (Solo camlCase) y un commit por función*/
 
-function consumoMensual (){
-    let cantidadDias = Number(prompt("Ingrese la cantidad de dias"))
-    let cantidadKilovatio = Number(prompt("Ingrese la cantidad de kilovatios"))
-    let resultadoConsumo = cantidadDias * cantidadKilovatio
-    return resultadoConsumo
+function calcularConsumoMensual() {
+  let cantidadDias = 30
+  let consumoDiarioKwh = 20
+  let consumoTotal = cantidadDias * consumoDiarioKwh;
+  return consumoTotal;
 }
-let resultadoConsumo = consumoMensual()
-console.log (`El consumo mensual es de: ${resultadoConsumo} kWh`)
+
+function obtenerTarifaPorKwh() {
+  let valorKilovatio = 286
+  return valorKilovatio;
+}
+
+let consumoDelMes = calcularConsumoMensual();
+let tarifa = obtenerTarifaPorKwh();
+let valorAPagar = consumoDelMes * tarifa;
+
+console.log(`El consumo mensual es de: ${consumoDelMes} kWh`);
+console.log(`El valor total a pagar es de: $${valorAPagar} pesos`);
