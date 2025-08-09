@@ -43,3 +43,8 @@ let obtenerPorcentajeIva = function() {
 let calcularSubtotal = () => {
   return calcularConsumoMensual() * obtenerTarifaPorKwh();
 };
+let calcularValorIva = () => {
+  const subtotal = calcularSubtotal();
+  const porcentaje = obtenerPorcentajeIva();
+  return subtotal * (porcentaje / 100);
+};
