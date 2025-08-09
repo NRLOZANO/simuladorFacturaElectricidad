@@ -48,3 +48,26 @@ let calcularValorIva = () => {
   const porcentaje = obtenerPorcentajeIva();
   return subtotal * (porcentaje / 100);
 };
+let calcularTotalAPagar = () => {
+  return calcularSubtotal() + calcularValorIva() + obtenerCargoFijo();
+};
+
+function Factura() {
+  const consumo = calcularConsumoMensual();
+  const tarifa = obtenerTarifaPorKwh();
+  const subtotal = calcularSubtotal();
+  const valorCargoFijo = obtenerCargoFijo();
+  const porcentajeIva = obtenerPorcentajeIva();
+  const valorIva = calcularValorIva();
+  const total = calcularTotalAPagar();
+
+  console.log("Factura de Consumo de Energía");
+  console.log(`Consumo mensual de Kilovatios: ${consumo} Kws`);
+  console.log(`Tarifa básica por Kilovatio: ${tarifa} pesos`);
+  console.log(`Subtotal: ${subtotal} pesos`);
+  console.log(`Cargo Fijo: ${valorCargoFijo} pesos`);
+  console.log(`IVA (${porcentajeIva}%): ${valorIva} pesos`);
+  console.log(`Total a Pagar: ${total} pesos`);
+}
+
+Factura();
