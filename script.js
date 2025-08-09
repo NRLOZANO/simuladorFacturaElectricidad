@@ -37,5 +37,8 @@ function obtenerTarifaPorKwh() {
 let obtenerCargoFijo = function() {
   return 8000;
 };
+let obtenerPorcentajeIva = function() {
+  return 19;
+};
 
 
