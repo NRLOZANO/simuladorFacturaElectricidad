@@ -23,20 +23,19 @@ El enfoque del ejercicio es comparar la forma y el comportamiento de cada tipo d
 El proyecto debe estar en un repositorio de GitHub con une buena conveción de nomenclatura (Solo camlCase) y un commit por función*/
 
 function calcularConsumoMensual() {
-  let cantidadDias = 30
-  let consumoDiarioKwh = 20
+  let cantidadDias = 30;
+  let consumoDiarioKwh = 20;
   let consumoTotal = cantidadDias * consumoDiarioKwh;
   return consumoTotal;
 }
 
 function obtenerTarifaPorKwh() {
-  let valorKilovatio = 286
+  let valorKilovatio = 286;
   return valorKilovatio;
 }
 
-let consumoDelMes = calcularConsumoMensual();
-let tarifa = obtenerTarifaPorKwh();
-let valorAPagar = consumoDelMes * tarifa;
+let obtenerCargoFijo = function() {
+  return 8000;
+};
 
-console.log(`El consumo mensual es de: ${consumoDelMes} kWh`);
-console.log(`El valor total a pagar es de: $${valorAPagar} pesos`);
+
